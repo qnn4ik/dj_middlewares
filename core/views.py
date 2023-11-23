@@ -5,16 +5,6 @@ from django.db import transaction
 from .models import *
 
 
-def first_insert():
-    Core.objects.create()
-    raise Exception("Some problem")
-
-
-def second_insert():
-    Core.objects.create()
-
-
 def home(request):
-    first_insert()
-    second_insert()
+    # 1/0
     return JsonResponse({'success': True})
